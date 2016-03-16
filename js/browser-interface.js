@@ -12,7 +12,7 @@ $(document).ready(function(){
     var lat = $('input#getLat').val();
 
     var lon = $('input#getLon').val();
-    
+
     var locate = findLocation(lat, lon);
     google.maps.event.addDomListener(window, 'load', locate);
   });
@@ -27,9 +27,9 @@ $(document).ready(function(){
 
   $('#getMirror').click(function(){
     var lat = $('input#getLat').val();
-    console.log(lat);
+  
     var lon = $('input#getLon').val();
-    console.log(lon);
+
     var locate = findMirror(lat, lon);
     google.maps.event.addDomListener(window, 'load', locate);
   });

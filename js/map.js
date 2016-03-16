@@ -45,12 +45,16 @@ exports.findMirror = function(lat, lon){
   var lat = lat - (lat * 2);
   var lon = lon;
   if(lon <= 0){
-    lon  += 180;
+    lon  -= -180;
     console.log(lon);
-  } else{
+  }else if(lon >0){
     lon -= 180;
     console.log(lon);
+  }else{
+    lon = 0;
   }
+
+
   var mapProp = {
     center:new google.maps.LatLng(lat,lon),
     zoom:8,
