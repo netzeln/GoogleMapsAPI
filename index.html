@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
@@ -15,14 +14,14 @@
     <div id="map" class="">
     </div>
 
-    <form class=""  >
+    <form id="getCoord" class=""  >
       <label for="getLat">Enter a Latitude</label>
-      <input type="number" id="getLat" name="lat" value="">
+      <input type="number" step="0.01" id="getLat" name="lat" value="">
       <label for="">Enter a Longitude</label>
-      <input type="number" id="getLon" name="lon" value="">
-      <button type="submit" id="getCoord" name="button">Find</button>
+      <input type="number" step="0.01" id="getLon" name="lon" value="">
+      <button type="button" name="button">Find</button>
     </form>
-    <div id="map2" class="">
-    </div>
+    <!-- <div id="map2" class="">
+    </div> -->
   </body>
 </html>
