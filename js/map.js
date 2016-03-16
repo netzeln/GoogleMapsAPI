@@ -17,7 +17,7 @@ exports.findLocation = function(lat, lon){
   var lon = lon;
   var mapProp = {
     center:new google.maps.LatLng(lat,lon),
-    zoom:10,
+    zoom:8,
     mapTypeControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -33,6 +33,7 @@ exports.locateAddress = function(address) {
       latitude = results[0].geometry.location.lat();
       longitude = results[0].geometry.location.lng();
       console.log(latitude);
+      console.log(longitude);
       exports.findLocation(latitude, longitude);
     } else {
       alert("Something went wrong " + status);
@@ -42,10 +43,17 @@ exports.locateAddress = function(address) {
 
 exports.findMirror = function(lat, lon){
   var lat = lat - (lat * 2);
-  var lon = lon - (lon * 2);
+  var lon = lon;
+  if(lon <= 0){
+    lon  += 180;
+    console.log(lon);
+  } else{
+    lon -= 180;
+    console.log(lon);
+  }
   var mapProp = {
     center:new google.maps.LatLng(lat,lon),
-    zoom:10,
+    zoom:8,
     mapTypeControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
