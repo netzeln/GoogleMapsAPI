@@ -9,17 +9,26 @@
     <title>Google Maps API</title>
   </head>
   <body>
-
+    <div class="container-fluid jumbotron">
+      <h1>Checkout Our API skillz</h1>
+    </div>
 
     <div id="map" class="">
     </div>
 
-    <form id="getCoord" class=""  >
+    <form  class=""  >
       <label for="getLat">Enter a Latitude</label>
       <input type="number" step="0.01" id="getLat" name="lat" value="">
       <label for="">Enter a Longitude</label>
       <input type="number" step="0.01" id="getLon" name="lon" value="">
-      <button type="button" name="button">Find</button>
+      <button type="button" id="getCoord" name="button">Find</button>
+      <button type="button" id="getMirror" name="button">Other Side</button>
+    </form>
+
+    <form >
+      <label for="Address">Enter an address</label>
+      <input type="text" id="Address" value="">
+      <button type="button" id="getAddress" name="button">Let's Go!</button>
     </form>
     <!-- <div id="map2" class="">
     </div> -->
