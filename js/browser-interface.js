@@ -28,7 +28,6 @@ $(document).ready(function(){
   });
 
 
-
   $('#getMirror').click(function(){
     var lat = $('input#getLat').val();
 
