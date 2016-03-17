@@ -2,10 +2,10 @@
 exports.initMap = function(lat, lon) {
 
 
- // if (lon === undefined){
- //   lat = 45;
- //   lon = -122;
- // }
+ if (lon === undefined){
+   lat = 45;
+   lon = -122;
+ }
   var mapProp = {
     center:new google.maps.LatLng(lat,lon),
     zoom:10,
@@ -13,6 +13,13 @@ exports.initMap = function(lat, lon) {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("map"),mapProp);
+
+  google.maps.event.addListener(map, "rightclick", function(event){
+    var lat = event.latLng.lat();
+    var lon = event.latLng.lng();
+    $('#getLat').val(lat);
+    $('#getLon').val(lon);
+  });
   // exports.addSearchBox();
 
    var input = document.getElementById('pac-input');
