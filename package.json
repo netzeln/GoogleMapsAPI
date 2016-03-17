@@ -23,5 +23,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netzeln/GoogleMapsAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/netzeln/GoogleMapsAPI/issues"
+  },
+  "homepage": "https://github.com/netzeln/GoogleMapsAPI#readme",
+  "description": "sdfsdf"
 }
