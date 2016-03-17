@@ -20,12 +20,12 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', locate);
   });
 
-  $('#getAddress').click(function(){
-    var address = $('input#Address').val();
-    var locate = locateAddress(address);
-
-    google.maps.event.addDomListener(window, 'load', locate);
-  });
+  // $('#getAddress').click(function(){
+  //   var address = $('input#Address').val();
+  //   var locate = locateAddress(address);
+  //
+  //   google.maps.event.addDomListener(window, 'load', locate);
+  // });
 
 
   $('#getMirror').click(function(){
