@@ -1,16 +1,11 @@
 
 exports.initMap = function(lat, lon) {
 
-
- // if (lon === undefined){
- //   lat = 45;
- //   lon = -122;
- // }
   var mapProp = {
     center:new google.maps.LatLng(lat,lon),
     zoom:10,
     mapTypeControl: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.HYBRID
   };
   var map=new google.maps.Map(document.getElementById("map"),mapProp);
 
@@ -84,7 +79,7 @@ exports.findLocation = function(lat, lon){
     center:new google.maps.LatLng(lat,lon),
     zoom:8,
     mapTypeControl: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.HYBRID
   };
   exports.initMap(lat, lon);
   // var map=new google.maps.Map(document.getElementById("map"),mapProp);
@@ -125,7 +120,7 @@ exports.findMirror = function(lat, lon){
     center:new google.maps.LatLng(lat,lon),
     zoom:8,
     mapTypeControl: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.HYBRID
   };
   // var map=new google.maps.Map(document.getElementById("map"),mapProp);
   exports.initMap(lat, lon);
@@ -148,7 +143,7 @@ exports.findMirrorHem = function(lat, lon){
     center:new google.maps.LatLng(lat,lon),
     zoom:8,
     mapTypeControl: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.HYBRID
   };
   // var map=new google.maps.Map(document.getElementById("map"),mapProp);
   exports.initMap(lat, lon);
